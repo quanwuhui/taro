@@ -17,7 +17,7 @@ export default class WeappCI extends BaseCI {
     if (this.pluginOpts.weapp == null) {
       throw new Error('请为"@tarojs/plugin-mini-ci"插件配置 "weapp" 选项')
     }
-    this.devToolsInstallPath = this.pluginOpts.weapp.devToolsInstallPath || (process.platform === 'darwin' ? '/Applications/wechatwebdevtools.app' : 'C:\\Program Files (x86)\\Tencent\\微信web开发者工具')
+    this.devToolsInstallPath = this.pluginOpts.weapp.devToolsInstallPath || (process.platform === 'darwin' ? '/Applications/wechatwebdevtools.app' : 'C:\\\"Program Files (x86)\"\\Tencent\\微信web开发者工具')
     delete this.pluginOpts.weapp.devToolsInstallPath
 
     const weappConfig: any = {
